@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+	@apply text-light;
+}
+
+.inputs {
+	@apply rounded-xl focus:outline-none bg-dark-200 placeholder:text-dark-100 w-full;
+}
+
+.aside-label {
+	@apply text-sm text-dark-100 py-2 block;
+}

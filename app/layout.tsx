@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${beVietnamPro.className} antialiased h-screen`}>
+			<body
+				className={`${beVietnamPro.className} antialiased h-screen relative`}
+			>
 				<header className="h-2/5 block">
 					<div className="w-full relative min-h-full bg-[url('../public/hero-image-wr.jpg')] bg-no-repeat bg-center flex justify-center items-center bg-cover">
 						<Image
@@ -36,7 +38,11 @@ export default function RootLayout({
 					</div>
 				</header>
 
-				<main className="h-3/5 bg-dark-200">{children}</main>
+				<main className="min-h-[60%] bg-dark-300">
+					<div className="container px-5 py-5 bg-dark-300 md:border md:border-dark-200 md:rounded-xl md:absolute md:top-1/3  md:left-1/2 md:-translate-x-1/2">
+						{children}
+					</div>
+				</main>
 			</body>
 		</html>
 	);
